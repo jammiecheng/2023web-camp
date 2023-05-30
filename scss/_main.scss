@@ -1,0 +1,325 @@
+.header {
+    margin-top: 40px;
+
+    .btn {
+        margin: 40px 0 0 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 540px;
+            height: 106px;
+            bottom: -1px;
+            left: 754px;
+            z-index: 1;
+            background-color: $black-100;
+        }
+    }
+}
+
+.right {
+    position: relative;
+
+    .motin-1 {
+        top: 100px;
+        right: 360px;
+    }
+
+    .motin-2 {
+        top: 100px;
+        right: 180px;
+    }
+
+    .motin-3 {
+        top: 100px;
+        right: 0;
+    }
+
+    &.motin::before {
+        width: 100%;
+        height: 100px;
+        left: 0;
+        top: 0;
+    }
+
+    &.motin::after {
+        width: 100%;
+        height: 160px;
+        left: 0;
+        top: 280px;
+    }
+}
+
+section {
+    gap: 160px;
+    margin-top: 440px;
+    margin-bottom: 160px;
+}
+
+.service {
+    h1 {
+        max-width: 856px;
+    }
+
+    ul {
+        margin-top: 80px;
+        gap: 24px;
+    }
+
+    li {
+        border: 1px solid $black-0;
+        border-radius: 16px;
+        padding: 80px 40px;
+        gap: 20px;
+        width: 33%;
+    }
+
+    span {
+        font-size: 80px;
+    }
+}
+
+.sponser {
+    .sponser-logo {
+        flex-wrap: nowrap;
+        position: relative;
+
+        img {
+            width: 160px;
+            object-fit: contain;
+        }
+    }
+
+    .dark-gradient-front {
+        margin-top: 80px;
+    }
+
+    .dark-gradient-end {
+        margin-bottom: 160px;
+    }
+
+    .dark-gradient-front::before,
+    .dark-gradient-end::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 105.3px;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to right, $black-100, transparent);
+    }
+
+    .dark-gradient-front::after,
+    .dark-gradient-end::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 105.3px;
+        right: 0;
+        top: 0;
+        background: linear-gradient(to left, $black-100, transparent);
+    }
+
+    ul {
+        gap: 24px;
+    }
+
+    li {
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0px 100px 80px rgba(18, 18, 18, 0.07), 0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198), 0px 22.3363px 17.869px rgba(18, 18, 18, 0.0417275), 0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035), 0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725), 0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
+        border-radius: 16px;
+        padding: 40px;
+        gap: 20px;
+        width: 33%;
+    }
+
+    .star {
+        gap: 4px;
+    }
+
+    .material-icons {
+        font-size: $body;
+    }
+
+    .person {
+        gap: 16px;
+    }
+
+    .sponser-btn {
+        display: none;
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    button {
+        width: 12px;
+        height: 12px;
+        background-color: $black-80;
+        border-radius: 50%;
+    }
+
+    .active-sponser-btn {
+        background-color: $black-0;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+footer {
+    a {
+        color: $black-0;
+    }
+}
+
+.slogan {
+    gap: 40px;
+    padding: 80px 0;
+    margin: 80px 0;
+
+    .btn {
+        gap: 12px;
+        padding: 20px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .display-2 {
+            padding-right: 111px;
+            font-size: $h1;
+        }
+
+        .btn::after {
+            width: 100px;
+            left: 162px;
+        }
+    }
+
+    .right {
+        img {
+            width: 117px;
+        }
+
+        .motin-1 {
+            top: 180px;
+            right: 234px;
+        }
+
+        .motin-2 {
+            top: 180px;
+            right: 117px;
+        }
+
+        .motin-3 {
+            top: 180px;
+            right: 0;
+        }
+
+        .motin::before {
+            height: 180px;
+            left: 0;
+            top: 0;
+        }
+
+        .motin::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            left: 0;
+            top: 297px;
+        }
+    }
+
+    section {
+        margin-top: 417px;
+    }
+
+    .service {
+        h3 {
+            font-size: $h6;
+        }
+
+        h1 {
+            font-size: $h3;
+        }
+
+        .space-between {
+            gap: 24px;
+        }
+
+        ul {
+            margin-top: 48px;
+            gap: 12px;
+        }
+
+        li {
+            width: 100%;
+            padding: 40px 20px;
+
+            h3 {
+                font-size: $h3;
+            }
+        }
+    }
+
+    .sponser {
+        h3 {
+            font-size: $h6;
+        }
+
+        li {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .sponser-logo {
+            overflow: hidden;
+
+            img {
+                height: 40px;
+            }
+        }
+
+        &-page {
+            display: flex;
+        }
+
+        .dark-gradient-front {
+            margin-top: 24px;
+        }
+
+        .dark-gradient-end {
+            margin-bottom: 48px;
+        }
+
+        .dark-gradient-front::before,
+        .dark-gradient-end::before {
+            width: 100px;
+            height: 40px;
+        }
+
+        .dark-gradient-front::after,
+        .dark-gradient-end::after {
+            width: 100px;
+            height: 40px;
+        }
+
+        .sponser-btn {
+            display: flex;
+        }
+    }
+
+    .slogan {
+        padding: 120px 0;
+        gap: 32px;
+        margin: 40px 0;
+
+        h1 {
+            font-size: $h3;
+            width: 224px;
+        }
+    }
+
+}

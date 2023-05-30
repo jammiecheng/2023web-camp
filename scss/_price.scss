@@ -1,0 +1,267 @@
+.header {
+    h1 {
+        width: 636px;
+        margin-left: auto;
+        margin-top: 80px;
+    }
+}
+
+.left {
+    position: relative;
+
+    img {
+        width: 117px;
+    }
+
+    .motin-1 {
+        top: 238px;
+        left: 0;
+    }
+
+    .motin-2 {
+        top: 238px;
+        left: 180px;
+    }
+
+    .motin-3 {
+        top: 238px;
+        left: 360px;
+    }
+
+    &.motin::before {
+        width: 100%;
+        height: 238px;
+        left: 0;
+        top: 0;
+    }
+
+    &.motin::after {
+        width: 100%;
+        height: 160px;
+        left: 0;
+        top: 418px;
+    }
+}
+
+section {
+    margin-top: 578px;
+}
+
+.price {
+    ul {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    h6 {
+        color: $black-60;
+
+        &.bold-900 {
+            color: $black-0;
+        }
+    }
+
+    &-list {
+        margin-top: 80px;
+    }
+
+    &-item {
+        border: 1px solid $black-60;
+        border-radius: 16px;
+        min-width: calc(50% - 24px);
+        &:hover{
+            border-color: $black-0;
+            transition: all .5s;
+        }
+    }
+
+    &-description {
+        padding: 20px 32px;
+        margin-bottom: 100px;
+
+        ul {
+            margin-top: 12px;
+        }
+
+        li {
+            margin-left: 20px;
+            list-style: disc;
+        }
+    }
+
+    &-bottom {
+        padding: 20px 32px;
+        border-top: 1px solid $black-60;
+
+        a {
+            gap: 12px;
+            color: $black-0;
+        }
+    }
+}
+
+.rule {
+    ul {
+        gap: 40px;
+        margin-top: 48px;
+    }
+
+    li {
+        padding-bottom: 40px;
+        border-bottom: 1px solid $black-80;
+    }
+
+    h1 {
+        margin-bottom: 24px;
+    }
+}
+
+.faq {
+    margin: 160px 0;
+
+    ul {
+        gap: 16px;
+        width: 856px;
+    }
+
+    li {
+        border: 1px solid $black-80;
+        border-radius: 16px;
+
+        &:hover {
+            border-color: $black-0;
+        }
+    }
+
+    button {
+        padding: 20px 40px;
+        color: $black-0;
+        gap: 20px;
+        width: 100%;
+    }
+
+    &-description {
+        text-align: left;
+
+        p {
+            padding-top: 20px;
+            line-height: 1.5;
+        }
+    }
+
+    .hidden {
+        display: none;
+    } 
+}
+
+@media (max-width: 768px) {
+    .header {
+        .display-2 {
+            padding-right: 111px;
+            font-size: $h1;
+        }
+
+        h1 {
+            font-size: $h4;
+            margin-top: 64px;
+            width: 257px;
+        }
+    }
+
+    .left {
+        .motin-1 {
+            top: 258px;
+            left: 0;
+        }
+
+        .motin-2 {
+            top: 258px;
+            left: 117px;
+        }
+
+        .motin-3 {
+            top: 258px;
+            left: 234px;
+        }
+
+        &.motin::before {
+            width: 100%;
+            height: 258px;
+            left: 0;
+            top: 0;
+        }
+
+        &.motin::after {
+            width: 100%;
+            height: 120px;
+            left: 0;
+            top: 375px;
+        }
+    }
+
+    section {
+        margin-top: 495px;
+    }
+
+    .price {
+        .title {
+            font-size: $h6;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 300px;
+                height: 100%;
+                right: 0;
+                background-color: $black-100;
+            }
+        }
+
+        &-list {
+            margin-top: 24px;
+        }
+
+        &-item {
+            width: 100%;
+        }
+    }
+
+    .rule {
+        h3 {
+            font-size: $h6;
+        }
+
+        h1 {
+            font-size: $h3;
+        }
+
+        ul {
+            gap: 24px;
+        }
+
+        li {
+            h3 {
+                font-size: $body;
+            }
+        }
+    }
+
+    .faq {
+        margin: 120px 0;
+        gap: 24px;
+
+        h3 {
+            font-size: $h6;
+        }
+
+        button {
+            padding: 20px;
+            text-align: left;
+
+            &.d-flex {
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
