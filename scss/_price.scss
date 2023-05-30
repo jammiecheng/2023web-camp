@@ -9,10 +9,6 @@
 .left {
     position: relative;
 
-    img {
-        width: 117px;
-    }
-
     .motin-1 {
         top: 238px;
         left: 0;
@@ -169,6 +165,10 @@ section {
     }
 
     .left {
+        img {
+            width: 117px;
+        }
+
         .motin-1 {
             top: 258px;
             left: 0;

@@ -761,9 +761,6 @@ footer a {
 .left {
   position: relative;
 }
-.left img {
-  width: 117px;
-}
 .left .motin-1 {
   top: 238px;
   left: 0;
@@ -887,6 +884,9 @@ section {
     font-size: 28px;
     margin-top: 64px;
     width: 257px;
+  }
+  .left img {
+    width: 117px;
   }
   .left .motin-1 {
     top: 258px;
