@@ -65,7 +65,12 @@ h6 {
 
 .small {
     font-size: $small;
-    line-height: 150%;
+    line-height: 1.5;
+}
+
+.tiny {
+    font-size: $tiny;
+    line-height: 1.5;
 }
 
 .bold-900 {
@@ -128,6 +133,7 @@ button {
     font-size: $body;
     font-weight: normal;
     background-color: transparent;
+    padding: 0;
 }
 
 .navbar {
@@ -259,6 +265,52 @@ button {
 
 .tag-bar {
     margin-top: 24px;
+
+    .btn:focus {
+        border-color: $black-100;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.filiter{
+    position: relative;
+
+    &_list {
+        position: absolute;
+        width: 240px;
+        margin-top: 4px;
+        padding: 20px 0;
+        align-items: flex-start;
+        text-align: left;
+        background-color: $black-0;
+        border-radius: 16px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+    
+        .tiny {
+            color: $black-60;
+        }
+    
+        ul {
+            width: 100%;
+            gap: 8px;
+            li{
+                padding: 4px 32px;
+            }
+        }
+
+        .filiter_list-item:hover{
+            background-color: $black-20;
+        }
+
+        .divider {
+            margin: 4px 32px 20px 32px;
+            border-bottom: 1px solid $black-20;
+        }
+    }
 }
 
 .tag-list {
@@ -276,6 +328,27 @@ button {
             color: $black-100;
             background-color: $black-20;
             border-radius: 16px;
+        }
+    }
+}
+
+.order{
+    position: relative;
+    &_list {
+        position: absolute;
+        margin-top: 4px;
+        padding: 16px 0;
+        right: 0;
+        background-color: $black-0;
+        border-radius: 16px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+        button{
+            width: 100%;
+            padding: 4px 20px;
+            &:hover{
+                background-color: $black-20;
+            }
         }
     }
 }
@@ -427,9 +500,13 @@ button {
         }
     }
 
+    .filiter_list{
+        width: calc(100vw - 24px);
+    }
+
     .tag-list {
         margin-top: 16px;
-        overflow: hidden;
+        overflow: overlay;
         order: 2;
         flex-wrap: nowrap;
 
@@ -470,7 +547,7 @@ button {
 
     .hidden {
         display: none;
-    }    
+    }
 }
 
 @keyframes slide-up {

@@ -15,7 +15,7 @@
         <div class="navbar d-flex space-between center">
             <a href="index.html" class="bold-700">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
-                    alt="logo" class="logo">
+                    alt="logo-AI 工具王" class="logo">
             </a>
             <button type="button" class="navbar-btn">
                 <span class="material-icons">
@@ -153,23 +153,56 @@
                 <input type="search" placeholder="輸入關鍵字搜尋">
             </div>
             <div class="tag-bar d-flex space-between center">
-                <button class="btn d-flex center">
-                    <p class="text-black">篩選</p>
-                    <span class="material-icons text-black">filter_alt</span>
-                </button>
+                <div class="filiter">
+                    <button type="button" class="btn d-flex center" id="filiter-btn">
+                        <p class="text-black">篩選</p>
+                        <span class="material-icons text-black">filter_alt</span>
+                    </button>
+                    <div class="filiter_list d-flex column hidden">
+                        <ul class="d-flex column">
+                            <li class="tiny bold-700">AI 模型</li>
+                            <li class="filiter_list-item"><button type="button">所有模型</button></li>
+                            <li class="filiter_list-item"><button type="button">卡卡</button></li>
+                            <li class="filiter_list-item"><button type="button">杰杰</button></li>
+                            <li class="filiter_list-item"><button type="button">琪琪</button></li>
+                            <li class="filiter_list-item"><button type="button">昊昊</button></li>
+                            <li class="divider"></li>
+                        </ul>
+                        <ul class="d-flex column">
+                            <li class="tiny bold-700">類型</li>
+                            <li class="filiter_list-item"><button type="button">所有類型</button></li>
+                            <li class="filiter_list-item"><button type="button">聊天</button></li>
+                            <li class="filiter_list-item"><button type="button">影像辨識</button></li>
+                            <li class="filiter_list-item"><button type="button">翻譯</button></li>
+                            <li class="filiter_list-item"><button type="button">行銷</button></li>
+                            <li class="filiter_list-item"><button type="button">客服</button></li>
+                            <li class="filiter_list-item"><button type="button">生產力</button></li>
+                        </ul>
+                    </div>
+                </div>
                 <ul class="d-flex tag-list">
                     <li class="active-tag"><button id="tag-1">全部</button></li>
-                    <li><button id="tag-2">聊天</button></li>
-                    <li><button id="tag-3">影像辨識</button></li>
-                    <li><button id="tag-4">翻譯</button></li>
-                    <li><button id="tag-5">行銷</button></li>
-                    <li><button id="tag-6">客服</button></li>
-                    <li><button id="tag-7">生產力</button></li>
+                    <li><button type="button" id="tag-2">聊天</button></li>
+                    <li><button type="button" id="tag-3">影像辨識</button></li>
+                    <li><button type="button" id="tag-4">翻譯</button></li>
+                    <li><button type="button" id="tag-5">行銷</button></li>
+                    <li><button type="button" id="tag-6">客服</button></li>
+                    <li><button type="button" id="tag-7">生產力</button></li>
                 </ul>
-                <button class="btn d-flex center text-black">
-                    <p class="text-black">由新到舊</p>
-                    <span class="material-icons text-black">keyboard_arrow_down</span>
-                </button>
+                <div class="order">
+                    <button type="button" class="btn d-flex center text-black" id="new-first">
+                        <p class="text-black">由新到舊</p>
+                        <span class="material-icons text-black">keyboard_arrow_down</span>
+                    </button>
+                    <button type="button" class="btn d-flex center text-black hidden" id="old-first">
+                        <p class="text-black">由舊到新</p>
+                        <span class="material-icons text-black">keyboard_arrow_down</span>
+                    </button>
+                    <div class="order_list d-flex column hidden">
+                        <button type="button" id="order_list-new-btn">由新到舊</button>
+                        <button type="button" id="order_list-old-btn">由舊到新</button>
+                    </div>
+                </div>
             </div>
             <ul class="app-list d-flex">
                 <li class="app-list-item">
@@ -247,22 +280,22 @@
             </ul>
             <ul class="tag-page d-flex">
                 <li class="active-tag-page" id="tag-page-1">
-                    <button class="small d-flex center">1</button>
+                    <button type="button" class="small d-flex center">1</button>
                 </li>
                 <li id="tag-page-2">
-                    <button class="small d-flex center">2</button>
+                    <button type="button" class="small d-flex center">2</button>
                 </li>
                 <li id="tag-page-3">
-                    <button class="small d-flex center">3</button>
+                    <button type="button" class="small d-flex center">3</button>
                 </li>
                 <li id="tag-page-4">
-                    <button class="small d-flex center">4</button>
+                    <button type="button" class="small d-flex center">4</button>
                 </li>
                 <li id="tag-page-5">
-                    <button class="small d-flex center">5</button>
+                    <button type="button" class="small d-flex center">5</button>
                 </li>
                 <li id="tag-page-6">
-                    <button class="small d-flex center">
+                    <button type="button" class="small d-flex center">
                         <span class="material-icons">keyboard_arrow_right</span>
                     </button>
                 </li>
@@ -274,7 +307,7 @@
             <h3 class="bold-900">常見問題</h3>
             <ul class="d-flex column">
                 <li id="faq-btn-1">
-                    <button class="d-flex">
+                    <button type="button" class="d-flex">
                         <div>
                             <span class="material-icons" id="open-btn-1">add</span>
                             <span class="material-icons hidden" id="close-btn-1">remove</span>
@@ -286,7 +319,7 @@
                     </button>
                 </li>
                 <li id="faq-btn-2">
-                    <button class="d-flex">
+                    <button type="button" class="d-flex">
                         <div>
                             <span class="material-icons" id="open-btn-2">add</span>
                             <span class="material-icons hidden" id="close-btn-2">remove</span>
@@ -298,7 +331,7 @@
                     </button>
                 </li>
                 <li id="faq-btn-3">
-                    <button class="d-flex">
+                    <button type="button" class="d-flex">
                         <div>
                             <span class="material-icons" id="open-btn-3">add</span>
                             <span class="material-icons hidden" id="close-btn-3">remove</span>
@@ -310,7 +343,7 @@
                     </button>
                 </li>
                 <li id="faq-btn-4">
-                    <button class="d-flex">
+                    <button type="button" class="d-flex">
                         <div>
                             <span class="material-icons" id="open-btn-4">add</span>
                             <span class="material-icons hidden" id="close-btn-4">remove</span>
@@ -322,7 +355,7 @@
                     </button>
                 </li>
                 <li id="faq-btn-5">
-                    <button class="d-flex">
+                    <button type="button" class="d-flex">
                         <div>
                             <span class="material-icons" id="open-btn-5">add</span>
                             <span class="material-icons hidden" id="close-btn-5">remove</span>
@@ -342,7 +375,7 @@
             </ul>
             <a href="index.html"><img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
-                    alt="logo" class="logo"></a>
+                    alt="logo-AI 工具王" class="logo"></a>
         </div>
         <div class="footer d-flex">
             <p class="bold-700">AI工具王 &copy; 2023</p>
@@ -351,7 +384,7 @@
                 <li><a href="#" target="_blank" class="bold-700">Twitter</a></li>
                 <li><a href="#" target="_blank" class="bold-700">Instagram</a></li>
             </ul>
-            <button class="backtotop d-flex center" id="backtotop">
+            <button type="button" class="backtotop d-flex center" id="backtotop">
                 <p class="bold-700">Back to top</p>
                 <span class="material-icons">arrow_upward</span>
             </button>
