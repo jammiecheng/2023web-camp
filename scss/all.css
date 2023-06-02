@@ -343,6 +343,19 @@ button {
 .filiter_list .filiter_list-item:hover {
   background-color: #f2f2f2;
 }
+.filiter_list label {
+  width: 100%;
+  cursor: pointer;
+}
+.filiter_list input {
+  visibility: hidden;
+}
+.filiter_list span {
+  opacity: 0;
+}
+.filiter_list input:checked ~ span {
+  opacity: 1;
+}
 .filiter_list .divider {
   margin: 4px 32px 20px 32px;
   border-bottom: 1px solid #f2f2f2;

@@ -306,6 +306,23 @@ button {
             background-color: $black-20;
         }
 
+        label{
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input{
+            visibility: hidden;
+        }
+
+        span{
+            opacity: 0;
+        }
+
+        input:checked ~ span{
+            opacity: 1;
+        }
+
         .divider {
             margin: 4px 32px 20px 32px;
             border-bottom: 1px solid $black-20;
