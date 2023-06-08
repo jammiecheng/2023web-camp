@@ -1,0 +1,108 @@
+.text-black {
+    color: $black-100;
+}
+
+.display-1 {
+    font-size: $display-1;
+    line-height: 1.2;
+}
+
+.display-2 {
+    font-size: $display-2;
+    line-height: 1.2;
+}
+
+.display-3 {
+    font-size: $display-3;
+    line-height: 1.2;
+}
+
+.small {
+    font-size: $small;
+    line-height: 1.5;
+}
+
+.tiny {
+    font-size: $tiny;
+    line-height: 1.5;
+}
+
+.bold-900 {
+    font-weight: $bold-900;
+}
+
+.bold-700 {
+    font-weight: $bold-700;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.btn {
+    border: 1px solid $black-0;
+    border-radius: 16px;
+    padding: 20px 40px;
+    color: $black-0;
+}
+
+.logo {
+    width: 245px;
+}
+
+@media (max-width: 1400px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width: 768px) {
+    .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+
+    .logo {
+        width: 147px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container{
+        max-width: 100%;
+    }
+}

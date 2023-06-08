@@ -84,15 +84,17 @@ section {
     .sponser-logo {
         flex-wrap: nowrap;
         position: relative;
+        overflow-x: auto;
 
         img {
-            width: 160px;
+            height: 40px;
             object-fit: contain;
         }
     }
 
     .dark-gradient-front {
         margin-top: 80px;
+        margin-bottom: 20px;
     }
 
     .dark-gradient-end {
@@ -103,8 +105,8 @@ section {
     .dark-gradient-end::before {
         content: "";
         position: absolute;
-        width: 300px;
-        height: 105.3px;
+        width: 100px;
+        height: 40px;
         left: 0;
         top: 0;
         background: linear-gradient(to right, $black-100, transparent);
@@ -114,8 +116,8 @@ section {
     .dark-gradient-end::after {
         content: "";
         position: absolute;
-        width: 300px;
-        height: 105.3px;
+        width: 100px;
+        height: 40px;
         right: 0;
         top: 0;
         background: linear-gradient(to left, $black-100, transparent);
@@ -272,14 +274,6 @@ footer {
         li {
             width: 100%;
             padding: 20px;
-        }
-
-        .sponser-logo {
-            overflow: hidden;
-
-            img {
-                height: 40px;
-            }
         }
 
         &-page {

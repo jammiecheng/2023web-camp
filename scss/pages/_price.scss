@@ -99,7 +99,6 @@ section {
 .rule {
     ul {
         gap: 40px;
-        margin-top: 48px;
     }
 
     li {
@@ -262,6 +261,14 @@ section {
             &.d-flex {
                 flex-wrap: nowrap;
             }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .rule{
+        ul{
+            margin-top: 48px;
         }
     }
 }

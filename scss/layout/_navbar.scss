@@ -1,0 +1,59 @@
+
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+
+    a {
+        color: $black-0;
+    }
+
+    &-menu {
+        gap: 20px;
+    }
+
+    &-btn {
+        color: #ffffff;
+        display: none;
+        /* 在電腦版時不顯示 */
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &-collapse {
+        display: none;
+        /* 在電腦版時不顯示 */
+        position: absolute;
+        top: 81px;
+        width: 100%;
+        min-height: calc(100vh - 81px);
+        /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */
+        background-color: #000000;
+        // border-top: 1px solid #ffffff;
+        z-index: 999;
+
+        a {
+            font-size: $display-3;
+            line-height: 1.2;
+            margin: 4px 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-btn {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -14,25 +14,6 @@ body {
     line-height: 1.5;
 }
 
-.text-black {
-    color: $black-100;
-}
-
-.display-1 {
-    font-size: $display-1;
-    line-height: 1.2;
-}
-
-.display-2 {
-    font-size: $display-2;
-    line-height: 1.2;
-}
-
-.display-3 {
-    font-size: $display-3;
-    line-height: 1.2;
-}
-
 h1 {
     font-size: $h1;
     line-height: 1.2;
@@ -63,55 +44,6 @@ h6 {
     line-height: 1.2;
 }
 
-.small {
-    font-size: $small;
-    line-height: 1.5;
-}
-
-.tiny {
-    font-size: $tiny;
-    line-height: 1.5;
-}
-
-.bold-900 {
-    font-weight: $bold-900;
-}
-
-.bold-700 {
-    font-weight: $bold-700;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.center {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 12px;
-}
-
-.btn {
-    border: 1px solid $black-0;
-    border-radius: 16px;
-    padding: 20px 40px;
-    color: $black-0;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -134,53 +66,6 @@ button {
     font-weight: normal;
     background-color: transparent;
     padding: 0;
-}
-
-.navbar {
-    padding: 20px 0;
-    border-bottom: 1px solid #ffffff;
-    position: relative;
-
-    a {
-        color: $black-0;
-    }
-
-    &-menu {
-        gap: 20px;
-    }
-
-    &-btn {
-        color: #ffffff;
-        display: none;
-        /* 在電腦版時不顯示 */
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    &-collapse {
-        display: none;
-        /* 在電腦版時不顯示 */
-        position: absolute;
-        top: 81px;
-        width: 100%;
-        min-height: calc(100vh - 81px);
-        /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */
-        background-color: #000000;
-        // border-top: 1px solid #ffffff;
-        z-index: 999;
-
-        a {
-            font-size: $display-3;
-            line-height: 1.2;
-            margin: 4px 0;
-        }
-    }
-}
-
-.logo {
-    width: 245px;
 }
 
 .motin-1 {
@@ -390,17 +275,16 @@ button {
 
     .description {
         padding: 20px 32px;
-        gap: 12px;
-
-        p {
-            height: 42px;
+        flex-grow: 1;
+        p{
+            margin-top: 12px;
         }
     }
 
     &-item {
         border: 1px solid $black-20;
         border-radius: 16px;
-        width: 416px;
+        width: calc(33% - 12px);
 
         .space-between {
             padding: 20px 32px;
@@ -445,59 +329,38 @@ button {
     }
 }
 
-.footer {
-    padding: 20px 0;
-    border-top: 1px solid $black-0;
-    align-items: center;
-
-    p {
-        margin-right: 100px;
-    }
-
-    ul {
-        padding: 12px 0;
-        gap: 20px;
-    }
-
-    .backtotop {
-        margin-left: auto;
-        gap: 12px;
-        padding: 12px 0;
-        color: $black-0;
-
-        p {
-            margin-right: 0;
+@media (max-width: 1400px) {
+    .app-list{
+        &-item{
+            width: calc(50% - 12px);
         }
     }
 }
 
+@media (max-width: 992px) {
+    .app-list{
+        &-item{
+            width: 100%;
+        }
+    }
+
+    .tag-bar{
+        button{
+            white-space: nowrap;
+        }
+    }
+
+    .tag-list {
+        overflow: overlay;
+
+        button {
+            white-space: nowrap;
+        }
+    }
+
+}
+
 @media (max-width: 768px) {
-    .d-flex {
-        flex-wrap: wrap;
-    }
-
-    .container {
-        max-width: 100%;
-    }
-
-    .navbar-btn {
-        display: flex;
-    }
-
-    .navbar-menu {
-        display: none;
-    }
-
-    .navbar-collapse.show {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logo {
-        width: 147px;
-    }
-
     .app {
         border-radius: 20px;
         padding: 80px 0;
@@ -510,7 +373,6 @@ button {
     }
 
     .search-bar {
-
         input,
         input:focus {
             width: auto;
@@ -523,16 +385,11 @@ button {
 
     .tag-list {
         margin-top: 16px;
-        overflow: overlay;
         order: 2;
         flex-wrap: nowrap;
 
         li {
             height: 40px;
-        }
-
-        button {
-            white-space: nowrap;
         }
     }
 
@@ -546,19 +403,6 @@ button {
 
         .display-3 {
             font-size: $h1;
-        }
-    }
-
-    .footer {
-        overflow: hidden;
-
-        p {
-            margin-right: auto;
-        }
-
-        ul {
-            order: 2;
-            align-items: center;
         }
     }
 
