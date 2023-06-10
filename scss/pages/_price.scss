@@ -39,11 +39,8 @@
     }
 }
 
-section {
-    margin-top: 578px;
-}
-
 .price {
+    margin-top: 578px;
     ul {
         gap: 24px;
         flex-wrap: wrap;
@@ -198,11 +195,8 @@ section {
         }
     }
 
-    section {
-        margin-top: 495px;
-    }
-
     .price {
+        margin-top: 495px;
         .title {
             font-size: $h6;
             position: relative;
